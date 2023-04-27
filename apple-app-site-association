@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "PBE55UDE4U.com.hiib.hitest.ios",
+                "paths": [ "*" ]
+            }
+        ]
+    }
+}
