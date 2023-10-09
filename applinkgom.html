@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="theme-color" content="#082e59">
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>MTS Applink Test Page</title>
+
+    <script type="text/javascript">
+
+        <!-- MTS 현재가 딥링크 -->
+
+        var mts_intent = 'dbfixts://'
+        // var mts_scheme = 'scheme=dbfixts;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;'
+        var mts_scheme = 'scheme=dbfixts;'
+        var package    = 'package=com.dbfi.xts' + ';end'
+
+        function toMTS(menuNum, itemCode) {
+            var mts_link = mts_intent + 'menuNum=' + menuNum + '&openData=' + itemCode;
+            location.href = mts_link;
+        }
+
+        <!-- MTS 홈 딥링크 ---------------------------------------------------------------------------------------------->
+
+        function toMtsHome() {
+            var mts_link = mts_intent + 'menuNum=0010';
+            location.href = mts_link;
+        }
+
+        function toNaver() {
+            
+        }
+        
+        function goGMTS() {
+            
+        }
+                
+
+        <!-- MTS 현재가 앱링크 -------------------------------------------------------------------------------------------->
+        
+        // var domain_url = 'https://oedpus.synology.me' + '/mts' + '?'
+
+        // function toMtsApplink(itemCode) {
+        //     location.href = domain_url + 'menuNum=1100' + '&openData=' + itemCode;
+        // }
+
+        <!-- MTS 홈 앱링크 -->        
+        
+        // function toMtsHomeApplink() {
+        //     location.href = domain_url + 'menuNum=0010'
+        // }
+
+
+
+        var domain_url2 = 'https://m.db-fi.com/mts/link/and'
+        var addData = '&from=Test&jsonData={"0" : {"Image" : "img_menu_banner03","ScreenName" : "ChatConsulting","OpenStyle" : "Popup","IndexesHidden" : []},"1" : {"Image" : "img_menu_banner02","ScreenName" : "0020","OpenStyle" : "Screen","IndexesHidden" : [],"EasyMode" : 1}}'
+        
+        <!-- MTS 앱링크2 ---------------------------------------------------------------------------------------------->
+
+        function toMtsApplink2(menuNum, itemCode) {
+            location.href = domain_url2 + '?menuNum=' + menuNum + '&openData=' + itemCode + addData;
+        }
+
+
+        <!-- MTS 홈 앱링크2 -->        
+        
+        function toMtsHomeApplink2() {
+            location.href = domain_url2 + '?menuNum=0010'
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+<div id="accessibility">
+
+    <h3> 딥링크 ------------------------------------------------</h3>
+
+    <strong class="blind">주문</strong>
+    <ul>
+        <li><a href="javascript:toMTS('1200', '016610')"><strong>DB금융투자(016610)</strong></a></li>
+        <li><a href="javascript:toMTS('1200', '035420')"><strong>NAVER(035420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">현재가</strong>
+    <ul>
+        <li><a href="javascript:toMTS('1100', '016610')"><strong>DB금융투자(016610)</strong></a></li>
+        <li><a href="javascript:toMTS('1100', '035420')"><strong>NAVER(035420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">홈</strong>
+    <ul>
+        <li><a href="javascript:toMtsHome()"><strong>MTS 홈</strong></a></li>
+    </ul>
+
+   <strong class="blind">GMTS 딥링크</strong>
+    <ul>
+        <li><a href="javascript:goGMTS()"><strong>GMTS</strong></a></li>
+    </ul>
+
+
+<br><br>
+
+   <!--  <strong class="blind">MTS 현재가 앱링크</strong>
+    <ul>
+        <li><a href="javascript:toMtsApplink('091990')"><strong>셀트리온헬스케어(091990)</strong></a></li>
+        <BR>
+        <li><a href="javascript:toMtsApplink('249420')"><strong>일동제약(249420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">MTS 홈 앱링크</strong>
+    <ul>
+        <li><a href="javascript:toMtsHomeApplink()"><strong>MTS 홈</strong></a></li>
+    </ul> -->
+
+<!--     <br>
+
+    <strong class="blind">MTS 딥링크 at dev.db-fi.com</strong>
+    <ul>
+        <li><a href="javascript:toMtsDeeplink()"><strong>MTS 딥링크</strong></a></li>
+    </ul> -->
+
+    <h3> 앱링크 ------------------------------------------------</h3>
+
+    <strong class="blind">주문</strong>
+    <ul>
+        <li><a href="javascript:toMtsApplink2('1200', '016610')"><strong>DB금융투자(016610)</strong></a></li>
+        <li><a href="javascript:toMtsApplink2('1200', '035420')"><strong>NAVER(035420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">현재가</strong>
+    <ul>
+        <li><a href="javascript:toMtsApplink2('1100', '016610')"><strong>DB금융투자(016610)</strong></a></li>
+        <li><a href="javascript:toMtsApplink2('1100', '035420')"><strong>NAVER(035420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">홈</strong>
+    <ul>
+        <li><a href="javascript:toMtsHomeApplink2()"><strong>MTS 홈</strong></a></li>
+    </ul>
+
+
+
+</div>
+<!--  -->
+</body>
+</html>
