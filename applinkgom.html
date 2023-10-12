@@ -20,14 +20,14 @@
         var package    = 'package=com.dbfi.xts' + ';end'
 
         function toMTS(menuNum, itemCode) {
-            var mts_link = mts_intent + 'menuNum=' + menuNum + '&openData=' + itemCode;
+            var mts_link = mts_intent + '?menuNum=' + menuNum + '&openData=' + itemCode;
             location.href = mts_link;
         }
 
         <!-- MTS 홈 딥링크 ---------------------------------------------------------------------------------------------->
 
         function toMtsHome() {
-            var mts_link = mts_intent + 'menuNum=0010';
+            var mts_link = mts_intent + '?menuNum=0010';
             location.href = mts_link;
         }
 
