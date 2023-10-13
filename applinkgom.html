@@ -65,6 +65,10 @@
             location.href = domain_url2 + '?menuNum=' + menuNum + '&openData=' + itemCode;
         }
 
+        function toMtsApplink3(menuNum, itemCode) {
+            location.href = 'https://www.hotpple.co.kr/mts/ios' + '?menuNum=' + menuNum + '&openData=' + itemCode;
+        }
+
 
         <!-- MTS 홈 앱링크2 -->        
         
@@ -139,6 +143,12 @@
     <ul>
         <li><a href="javascript:toMtsApplink2('1100', '016610')"><strong>DB금융투자(016610)</strong></a></li>
         <li><a href="javascript:toMtsApplink2('1100', '035420')"><strong>NAVER(035420)</strong></a></li>
+    </ul>
+
+    <strong class="blind">hotpple 현재가</strong>
+    <ul>
+        <li><a href="javascript:toMtsApplink3('1100', '016610')"><strong>DB금융투자(016610)</strong></a></li>
+        <li><a href="javascript:toMtsApplink3('1100', '035420')"><strong>NAVER(035420)</strong></a></li>
     </ul>
 
     <strong class="blind">홈</strong>
